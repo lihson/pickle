@@ -1,0 +1,9 @@
+plugins { id 'com.android.application' }
+android {
+ namespace 'tw.pickle.score'
+ compileSdk 35
+ defaultConfig { applicationId 'tw.pickle.score'; minSdk 26; targetSdk 35; versionCode 1; versionName '0.1.0' }
+ signingConfigs { debug { storeFile file("../debug.keystore"); storePassword "android"; keyAlias "androiddebugkey"; keyPassword "android" } }
+ compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}
+dependencies { implementation 'com.garmin.connectiq:ciq-companion-app-sdk:2.2.0@aar' }
